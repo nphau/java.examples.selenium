@@ -21,12 +21,10 @@ class FireFoxWebDriverManager extends WebDriverManager {
 
     @Override
     public WebDriver setUp(@Nullable String driverPath) {
-        if (driverPath != null) {
+        if (driverPath != null)
             System.setProperty("webdriver.gecko.driver", driverPath);
-        }
         FirefoxOptions options = new FirefoxOptions();
         WebDriver driver = new FirefoxDriver(options);
-        driver.manage().window().maximize();
         setUp(driver);
         return driver;
     }

@@ -54,7 +54,7 @@ public class Utils {
             }
 
             String textToWrite = driver.getCurrentUrl();
-            Font myFont = new Font("Serif", Font.PLAIN, 20);
+            Font myFont = new Font("Times", Font.PLAIN, 20);
             BufferedImage im = ImageIO.read(screenshot);
             Graphics2D g2 = im.createGraphics();
 

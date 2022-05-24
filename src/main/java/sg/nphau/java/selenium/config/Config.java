@@ -8,7 +8,7 @@ package sg.nphau.java.selenium.config;
 
 public class Config {
     private String webBrowser;
-    private String webDriverPath;
+    private String driverPath;
 
     public Config(String webBrowser) {
         this.webBrowser = webBrowser;
@@ -22,11 +22,11 @@ public class Config {
         this.webBrowser = webBrowser;
     }
 
-    public String getWebDriverPath() {
-        return webDriverPath;
+    public String getDriverPath() {
+        return driverPath;
     }
 
-    public void setWebDriverPath(String webDriverPath) {
-        this.webDriverPath = webDriverPath;
+    public void setDriverPath(String webDriverPath) {
+        this.driverPath = webDriverPath;
     }
 }

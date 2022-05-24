@@ -6,30 +6,30 @@
 
 package sg.nphau.java.selenium;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import sg.nphau.java.selenium.wdm.DriverType;
 import sg.nphau.java.selenium.wdm.WebDriverManager;
 
 public class InstallDriversTest {
 
-    @Test
+    @Test(priority = 2)
     public void chromeSession() {
-        WebDriver driver = WebDriverManager.chromeDriver().setUp(null);
+        WebDriver driver = WebDriverManager.get(DriverType.CHROME);
         driver.quit();
     }
 
-    @Test
+    @Test(priority = 3)
     public void edgeSession() {
-        WebDriver driver = WebDriverManager.edgeDriver().setUp(null);
+        WebDriver driver = WebDriverManager.get(DriverType.EDGE);
         driver.quit();
     }
 
-    @Test
+    @Test(priority = 1)
     public void firefoxSession() {
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = WebDriverManager.get(DriverType.FIRE_FOX);
         driver.quit();
     }
 

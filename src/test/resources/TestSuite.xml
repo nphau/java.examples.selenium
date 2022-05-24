@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+<!--    <test name="InstallDriversTest">-->
+<!--        <classes>-->
+<!--            <class name="sg.nphau.java.selenium.InstallDriversTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://github.com"/>
+    <test name="GithubTest">
+        <classes>
+            <class name="sg.nphau.java.selenium.GithubTest"/>
+        </classes>
+    </test>
+</suite>
